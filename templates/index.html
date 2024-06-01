@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Bazar</title>
+    <style>
+        body {
+            background-color: gray;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            max-width: 500px; /* Restored original size */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Bazar</h1> <!-- Changed title to "Car Bazar" -->
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="Car_ID">Car ID</label>
+                <input type="number" id="Car_ID" name="Car_ID" placeholder="Enter value between 1 to 10" required>
+            </div>
+            <div class="form-group">
+                <label for="Year">Year</label>
+                <select id="Year" name="Year" required>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Kilometers_Driven">Kilometers Driven</label>
+                <input type="number" id="Kilometers_Driven" name="Kilometers_Driven" required>
+            </div>
+            <div class="form-group">
+                <label for="Fuel_type">Fuel Type</label>
+                <select id="Fuel_type" name="Fuel_type" required>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Transmission">Transmission</label>
+                <select id="Transmission" name="Transmission" required>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Owner_type">Owner Type</label>
+                <select id="Owner_type" name="Owner_type" required>
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Mileage">Mileage</label>
+                <input type="number" id="Mileage" name="Mileage" placeholder="Between 10 to 21" required>
+            </div>
+            <div class="form-group">
+                <label for="Engine">Engine CC</label>
+                <input type="number" id="Engine" name="Engine" placeholder="Enter how many CC of engine you are looking for" required>
+            </div>
+            <div class="form-group">
+                <label for="Power">Power</label>
+                <input type="number" id="Power" name="Power" placeholder="Enter Horse Power considering your Engine CC value" required>
+            </div>
+            <div class="form-group">
+                <label for="Seats">Seats</label>
+                <select id="Seats" name="Seats" required>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Brand">Brand</label>
+                <select id="Brand" name="Brand" required>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Maruti">Maruti</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Mahindra">Mahindra</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
