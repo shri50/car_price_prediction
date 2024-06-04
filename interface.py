@@ -32,6 +32,8 @@ def get_car_price():
     Seats = int(data1.get('Seats'))
     Brand = data1.get('Brand')
 
+    # this is new line
+
     car_pr1 = CarPrice(Car_ID,Year,Kilometers_Driven,Fuel_type,Transmission,Owner_type,Mileage,Engine,Power,Seats,Brand)
     price1 = car_pr1.get_predicted_price()
     return jsonify({'Result':f'Price of the car is: {round(price1,2)}'})
